@@ -1,26 +1,20 @@
 import 'package:flutter/material.dart';
 
-class DetalisPage extends StatefulWidget {
-  const DetalisPage({super.key});
+class DetailsScreen extends StatefulWidget {
+  const DetailsScreen({super.key});
 
   @override
-  State<DetalisPage> createState() => _DetalisPageState();
+  State<DetailsScreen> createState() => _DetailsScreenState();
 }
 
-class _DetalisPageState extends State<DetalisPage> {
+class _DetailsScreenState extends State<DetailsScreen> {
   @override
   Widget build(BuildContext context) {
     final args = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
     return Scaffold(
       appBar: AppBar(
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            // Icon(Icons.arrow_back, color: Colors.black),
-            SizedBox(width: 180),
-            Text("Details", style: TextStyle(color: Colors.black,fontSize: 24,fontWeight: FontWeight.bold)),
-          ],
-        ),
+        centerTitle: true,
+        title: Text("Details", style: TextStyle(color: Colors.black,fontSize: 24,fontWeight: FontWeight.bold)),
       ),
     body: Align(
       alignment: AlignmentGeometry.topCenter,

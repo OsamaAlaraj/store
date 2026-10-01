@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:testone/widget/Product.dart';
-import 'package:testone/widget/ProductWidget.dart';
+import 'package:testone/widget/product_model.dart';
+import 'package:testone/widget/product_widget.dart';
 
-import '../widget/bottomnavigationbar.dart';
+import '../widget/bottomnavigationbar_widget.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomeScreenState extends State<HomeScreen> {
   List<Product> products = [
     Product(
       name: 'Regular Fit Slogan',
@@ -147,7 +147,7 @@ class _HomePageState extends State<HomePage> {
                 itemCount: products.length,
                 scrollDirection: Axis.vertical,
                 itemBuilder: (context, index) {
-                  return Productwidget(product: products[index]);
+                  return CustomContainerProduct(product: products[index]);
                 },
               ),
             ),

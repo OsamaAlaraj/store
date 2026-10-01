@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:testone/widget/Product.dart';
+import 'package:testone/widget/product_model.dart';
 
-class Productwidget extends StatelessWidget {
+class CustomContainerProduct extends StatelessWidget {
   final Product product;
-  Productwidget({super.key, required this.product});
+  CustomContainerProduct({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {

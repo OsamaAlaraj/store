@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:testone/screens/register.dart';
+import 'package:testone/screens/register_screen.dart';
 import 'package:testone/widget/button_widget.dart';
-import 'package:testone/widget/storeTextField.dart';
+import 'package:testone/widget/textfield_widget.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _LoginScreenState extends State<LoginScreen> {
   TextEditingController emailcontroller = TextEditingController();
   TextEditingController passwordcontroller = TextEditingController();
   late bool cc;
@@ -51,7 +51,7 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(height: 30),
             Text("Email", style: TextStyle(color: Colors.black, fontSize: 16)),
             SizedBox(height: 4),
-            StoreTextField(
+            CustomTextField(
               textFeildcontroller: emailcontroller,
               hintText: 'Enter your email address',
               isVisable: false,
@@ -63,7 +63,7 @@ class _LoginPageState extends State<LoginPage> {
               style: TextStyle(color: Colors.black, fontSize: 16),
             ),
             SizedBox(height: 4),
-            StoreTextField(
+            CustomTextField(
               textFeildcontroller: passwordcontroller,
               hintText: 'Enter your password',
               isVisable: cc,
@@ -77,7 +77,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             SizedBox(height: 55),
-            ButtonWidget(
+            CustomButton(
               textbutton: "Sign In",
               onTap: () {
                 Navigator.pushNamed(context, '/home_screen');
@@ -95,7 +95,7 @@ class _LoginPageState extends State<LoginPage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => RegisterPage()),
+                      MaterialPageRoute(builder: (context) => RegisterScreen()),
                     );
                   },
                   child: Text(

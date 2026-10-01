@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class ButtonWidget extends StatefulWidget {
+class CustomButton extends StatefulWidget {
   late String textbutton;
   late VoidCallback onTap;
-   ButtonWidget({super.key,required this.textbutton,required this.onTap});
+   CustomButton({super.key,required this.textbutton,required this.onTap});
 
   @override
-  State<ButtonWidget> createState() => _ButtonWidgetState();
+  State<CustomButton> createState() => _CustomButtonState();
 }
 
-class _ButtonWidgetState extends State<ButtonWidget> {
+class _CustomButtonState extends State<CustomButton> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(

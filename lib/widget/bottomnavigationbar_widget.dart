@@ -17,7 +17,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
         } else if (index == 1) {
           Navigator.pushNamed(context, '/cart');
         } else if (index == 2) {
-          Navigator.pushNamed(context, '/profile');
+          Navigator.pushNamed(context, '/account_screen');
         }
       },
       items: const [

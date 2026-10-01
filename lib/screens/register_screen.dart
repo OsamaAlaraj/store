@@ -1,16 +1,16 @@
 import "package:flutter/material.dart";
-import "package:testone/screens/login.dart";
+import "package:testone/screens/login_screen.dart";
 import "package:testone/widget/button_widget.dart";
-import "package:testone/widget/storeTextField.dart";
+import "package:testone/widget/textfield_widget.dart";
 
-class RegisterPage extends StatefulWidget {
-  const RegisterPage({super.key});
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
 
   @override
-  State<RegisterPage> createState() => _RegisterPageState();
+  State<RegisterScreen> createState() => _RegisterScreenState();
 }
 
-class _RegisterPageState extends State<RegisterPage> {
+class _RegisterScreenState extends State<RegisterScreen> {
   late bool hidepassword1;
   late bool hidepassword2;
   TextEditingController _namecontroller = TextEditingController();
@@ -64,7 +64,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 style: TextStyle(color: Colors.black, fontSize: 16),
               ),
             ),
-            StoreTextField(
+            CustomTextField(
               textFeildcontroller: _namecontroller,
               hintText: 'Enter your full name',
               isVisable: false,
@@ -78,7 +78,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 style: TextStyle(color: Colors.black, fontSize: 16),
               ),
             ),
-            StoreTextField(
+            CustomTextField(
               textFeildcontroller: _emailcontroller,
               hintText: 'Enter your email address',
               isVisable: false,
@@ -92,7 +92,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 style: TextStyle(color: Colors.black, fontSize: 16),
               ),
             ),
-            StoreTextField(
+            CustomTextField(
               textFeildcontroller: _passwordcontroller,
               hintText: 'Enter your email address',
               isVisable: hidepassword1,
@@ -115,7 +115,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 style: TextStyle(color: Colors.black, fontSize: 16),
               ),
             ),
-            StoreTextField(
+            CustomTextField(
               textFeildcontroller: _confirm_passwordcontroller,
               hintText: 'Enter your password ',
               isVisable: hidepassword2,
@@ -131,7 +131,7 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
             ),
             SizedBox(height: 50),
-            ButtonWidget(
+            CustomButton(
               textbutton: "Create Account",
               onTap: () {
                 Navigator.pushNamed(context, "/home_screen");
@@ -149,7 +149,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => LoginPage()),
+                      MaterialPageRoute(builder: (context) => LoginScreen()),
                     );
                   },
                   child: Text(

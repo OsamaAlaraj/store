@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class StoreTextField extends StatefulWidget {
+class CustomTextField extends StatefulWidget {
   TextEditingController textFeildcontroller = TextEditingController();
   late String hintText;
   late bool isVisable;
   late Widget? icon;
 
-  StoreTextField({
+  CustomTextField({
     super.key,
     required this.textFeildcontroller,
     required this.hintText,
@@ -14,10 +14,10 @@ class StoreTextField extends StatefulWidget {
     required this.icon,
   });
   @override
-  State<StoreTextField> createState() => _StoreTextFieldState();
+  State<CustomTextField> createState() => _CustomTextFieldState();
 }
 
-class _StoreTextFieldState extends State<StoreTextField> {
+class _CustomTextFieldState extends State<CustomTextField> {
   @override
   Widget build(BuildContext context) {
     return TextField(

@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:testone/widget/button_widget.dart';
 
-import '../widget/Product.dart';
-import '../widget/ProductWidget.dart';
-import '../widget/bottomnavigationbar.dart';
+import '../widget/product_model.dart';
+import '../widget/product_widget.dart';
+import '../widget/bottomnavigationbar_widget.dart';
 
-class Cart extends StatefulWidget {
-  Cart({super.key});
+class CartScreen extends StatefulWidget {
+  CartScreen({super.key});
 
   @override
-  State<Cart> createState() => _CartState();
+  State<CartScreen> createState() => _CartScreenState();
 }
 
-class _CartState extends State<Cart> {
+class _CartScreenState extends State<CartScreen> {
   List<Product> products = [
     Product(
       name: 'tshirt',
@@ -52,7 +52,7 @@ class _CartState extends State<Cart> {
                 itemCount: products.length,
                 scrollDirection: Axis.vertical,
                 itemBuilder: (context, index) {
-                  return Productwidget(product: products[index]);
+                  return CustomContainerProduct(product: products[index]);
                 },
               ),
             ),
@@ -114,7 +114,7 @@ class _CartState extends State<Cart> {
               ],
             ),
             SizedBox(height: 50,),
-            ButtonWidget(textbutton: "Go To Checkout    ⮕", onTap: (){}),
+            CustomButton(textbutton: "Go To Checkout    ⮕", onTap: (){}),
           ],
         ),
       ),
